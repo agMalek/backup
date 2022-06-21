@@ -1,0 +1,7 @@
+cambiar palabara en pedidos admin descrpicion por fecha
+
+arreglar formato fecha en detalle admin
+
+sacar boton terminado de detalle admin cuando este terminado
+
+poner el !pidiendo en un div por afuera en detalle admin

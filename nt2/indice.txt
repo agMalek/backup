@@ -1,0 +1,74 @@
+npm i bootstrap jquery popper.js
+en el main.js ...
+    import 'jquery'
+    import 'popper.js'
+    import 'bootstrap'
+    import 'bootstrap/dist/css/bootstrap.min.css'
+
+
+npm i vue-generate-component
+vgc -s src/components/Nombre
+vgs src/components/nombre
+
+//cuando se crea un componente sin -s se cambia...
+scss en el index
+
+en el templete se agreaga el componente, 
+en el script con el import, 
+en la data del export-components
+
+
+npm install @vuelidate/core @vuelidate/validators
+
+
+npm i vue-router@next
+creo el router....
+carpeta con index.js adentro
+import {createWebHistory, createRouter} from 'vue-router'
+importar los componentes con lo que quiero routear
+crear un array de objetos llamado routes....
+cada objeto de ese array con el path, name y components
+creo un const router = createRouter({
+  pasandole un objeto...
+  histrory: createWebHistory
+  ,routes(el array)  
+}) 
+export default router
+en el main.js 'import router from './router'
+y pongo use(router) en medio de create y mount
+createApp(App).use(router).mount('#app')
+
+en el app.vue pongo en el templete el router-view
+
+en el navbar (donde queiro hacer los router)...
+cada enlace lo encierro dento de un router link
+y a cada router link le paso en la propiedad 'to' lo que pusimos en el path cuando creamos el router en el index.js
+
+
+
+npm install @vuelidate/core @vuelidate/validators
+
+en el main.js import { VuelidatePlugin } from '@vuelidate/core'
+y pongo un use(VuelidatePlugin) en medio del otro use y del mount
+
+en el formulario vue...
+fuera del export dentro del script import { email, required } from '@vuelidate/validators'
+en el export default agrego la parte de validaciones
+validations: {
+    form: {
+      name: { required },
+      email: { required, email }
+    }
+  }
+
+
+
+
+
+npm install axios
+npm i vue-axios
+
+import en el main.js
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+y hago el use   .use(VueAxios, axios)
